@@ -144,7 +144,7 @@ router.delete('/:id', (req, res) => {
   })
     .then(dbProductData => {
       if (!dbProductData) {
-        return res.status(404).json({ message: 'No product found with this id.' });
+        return res.status(404).json({ message: 'Unable find a product with this id.' });
       }
       res.json(dbProductData);
     })
